@@ -1,11 +1,6 @@
 'use strict'
 
-const x = 2;
-
-function f() {
-  const x = 1;
-  console.log(x);
+{
+  const scores = [80, 90, 40];
+  console.log(scores);
 }
-
-f();
-console.log(x);     // function内のxはブロック外であるためしようできない
