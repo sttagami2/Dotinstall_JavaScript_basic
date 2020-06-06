@@ -1,14 +1,15 @@
 'use strict'
 
 {
-  const scores = [80, 90, 40, 70];
+  const otherScores = [10, 20];
+  // const scores = [80, 90, 40, 70, otherScores];  配列の中に配列を入れてしまう
+  // const scores = [80, 90, 40, 70, ...otherScores];
+  // console.log(scores);
 
-  // splice(変化が開始する位置, 削除数)
-  // splice(変化が開始する位置, 削除数, 追加する要素, ・・・)
-  scores.splice(1, 1, 40, 50);
-  // 配列の1番目を削除して、40点と50点を追加する
-
-  for (let i=0; i<scores.length; i++) {
-    console.log(`Score ${i+1}: ${scores[i]}`);
+  function sum(a, b) {
+    console.log(a + b);
   }
+
+  sum(...otherScores);
+
 }
