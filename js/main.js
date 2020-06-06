@@ -1,11 +1,11 @@
 'use strict'
 
-// function sum(a, b, c) {
-//   return a + b + c;
-// }
-const sum = function(a, b, c) {
-  return a + b + c;
+const x = 2;
+
+function f() {
+  const x = 1;
+  console.log(x);
 }
 
-const total = sum(1, 2, 3) + sum(3, 4, 5);
-console.log(total); 
+f();
+console.log(x);     // function内のxはブロック外であるためしようできない
