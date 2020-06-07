@@ -1,15 +1,23 @@
 'use strict'
 
 {
-  const otherScores = [10, 20];
-  // const scores = [80, 90, 40, 70, otherScores];  配列の中に配列を入れてしまう
-  // const scores = [80, 90, 40, 70, ...otherScores];
-  // console.log(scores);
+  const scores = [80, 90, 40, 70];
 
-  function sum(a, b) {
-    console.log(a + b);
-  }
+  // const [a, b, c, d] = scores;
+  // console.log(a);
+  // console.log(b);
+  // console.log(c);
+  // console.log(d);
 
-  sum(...otherScores);
+  // const [a, b, ...others] = scores;
+  // console.log(a);
+  // console.log(b);
+  // console.log(others);
 
+  // 値の交換
+  let x = 30;
+  let y = 70;
+  [x, y] = [y, x];
+  console.log(x);
+  console.log(y);
 }
