@@ -9,5 +9,13 @@
     y: 180,
   };
 
+  point.x = 120;
+  point['y'] = 140;
+
+  // console.log(point.x);
+  // console.log(point['y']);
+
+  point.z = 90;
+  delete point.y;
   console.log(point);
 }
