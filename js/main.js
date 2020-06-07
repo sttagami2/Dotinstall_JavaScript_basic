@@ -15,19 +15,31 @@
       this.likeCount++;
       this.show();
     }
+  }
+  class SponsoredPost {
+    constructor(text, sponsor) {
+      this.text = text;
+      this.likeCount = 0;
+      this.sponsor = sponsor;
+    }
 
-    // 静的メソッド
-    static showInfo() {
-      console.log('Post class version 1.0');
+    show() {
+      console.log(`${this.text} - ${this.likeCount} likes`);
+      console.log(`... sponsored by ${this.sponsor}`);
+    }
+
+    like() {
+      this.likeCount++;
+      this.show();
     }
   }
 
   const posts = [
     new Post('JavaScriptの勉強中・・・'),
     new Post('プログラミング楽しい'),
+    new SponsoredPost('3分銅がでマスターしよう', 'dotinstall'),
   ];
 
-  // posts[0].like();
+  posts[2].show();
 
-  Post.showInfo();
 }
