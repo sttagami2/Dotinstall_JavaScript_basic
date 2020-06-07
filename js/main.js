@@ -1,20 +1,15 @@
 'use strict'
 
 {
-  const point = {
-    x: 100,
-    y: 180,
-  };
+  let i = 0;
 
-  // const keys = Object.keys(point);
-  // keys.forEach(key => {
-  //   console.log(`Kye: ${key} Value: ${point[key]}`);
-  // });
+  function showTime() {
+    console.log(new Date());
+    i++;
+    if (i > 2) {
+      clearInterval(intervalId);
+    }
+  }
 
-  const points = [
-    {x: 30, y: 20},
-    {x: 10, y: 50},
-    {x: 40, y: 40},
-  ];
-  console.log(points[1].y);
+  const intervalId = setInterval(showTime, 1000);
 }
